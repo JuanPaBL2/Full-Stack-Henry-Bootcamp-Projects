@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/*CONTENEDOR DE MI NOMBRE-*/
+.div{
+    padding: 10px;
+    background-color: rgba(5, 1, 1, 0.856);
+    margin-bottom: 0%;
+    display:flexbox;
+    text-align: center;
+}
+
+/*MIS CAMPOS*/
+#mis-campos{
+    text-align: center;
+    margin-top: 30px;;
+    margin-bottom: 0.1px;
+    color: #F7F7F7;
+    padding: 2px;
+    display:inline;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 15px;
+}
+
+/*MI NOMBRE*/
+.div h1{
+    text-align:left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style:inherit;
+    font-size: 20px;
+    margin-left: 70px;
+    font-weight:900;
+    color:white;
+    margin-bottom: 0%;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(202, 202, 202);
+    background-color:black;
+    margin-top: 0%;
+    padding: 10px;
+    margin-bottom: 0%;
+}
+
+/*EFECTO TRAZADO SOBRE TEXTO 1*/
+.trazado{
+    background-image: linear-gradient(transparent 2%, rgba(46, 27, 190, 0.979) 50%);
+    background-size: 100% 10px; /* Ancho y grosor del pintado */
+    background-repeat:no-repeat;
+    background-position:  100%; /* Posicionamiento verticalmente */
+    text-align: center;
+}
+
+
+/*EFECTO TRAZADO SOBRE TEXTO 2*/
+.trazado2{
+    background-image: linear-gradient(transparent 2%, rgba(46, 27, 190, 0.979) 50%);
+    background-size: 100% 10px; /* Ancho y grosor del pintado */
+    background-repeat:no-repeat;
+    background-position:  100%; /* Posicionamiento verticalmente */
+    text-align: center;
+}
+
+.imagen-stack{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.imagen-data{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/*CONTENEDOR DE SOBRE MI Y TEXTO*/
+#seccion-dos{
+    text-align: center;
+    margin: 20px;
+    background-color: rgba(5, 1, 1, 0.856);
+    margin: 0;
+}
+
+/*H3 SOBRE MI*/
+#seccion-dos h3{
+    color: white;
+    padding: 2px;
+    display:inline;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 15px;
+}
+
+/*TEXTO*/
+#seccion-dos p{
+    margin-top: 10px;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+#seccion-tres{
+    background-color: black;
+    text-align: center;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    color: white;
+    padding: 10px;
+}
+
+#seccion-tres img {
+    width: 100px; /* Ancho deseado */
+    height: auto; /* Esto asegura que la imagen mantenga su proporción */
+}
+
+#seccion-tres li{
+    display:inline-block;
+    align-content: center;
+    padding: 20px;
+}
+
+/*MIS TECNOLOGIAS*/
+#seccion-tres span{
+    margin-bottom: 1px;;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 15px;
+    
+}
+
+footer{
+    background-color: rgba(5, 1, 1, 0.856);
+    padding: 20px;
+}
+
+footer h1{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+
+}
+
+footer form{
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.formulario label{
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    font-size: small;    
+    color: rgb(0, 0, 0);
+}
+
+.formulario input{
+    font-family:initial;
+}
+
+
+.card {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center; 
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card:hover{
+    background-color: blue;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/*______ESTILOS PARA LOS ELEMENTOS CREADOS EN JAVASCRIPT CON LA CLASE CORRESPONDIENTE______*/
+
+   
+#boton-form:hover{
+    cursor: pointer;
+}
+
+.tarjeta {
+    max-width: 300px; /* Establece un ancho máximo */
+    height: auto;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: medium;
+    
+}
+
+.titulo-tarjeta{
+    font-size: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.texto-tarjeta{
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    font-size: smaller;
+    text-align: center;
+    color: white;
+}
+
+.img-tarjeta {
+    width: 100%;
+    height: auto;
+}
+
+
+

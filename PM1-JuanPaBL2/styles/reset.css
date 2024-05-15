@@ -1,0 +1,24 @@
+/* Reset CSS básico */
+
+/* Establecer márgenes y padding en todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Esto es importante para evitar problemas de cálculo de tamaño con padding y border */
+}
+
+/* Establecer estilos de texto base */
+body {
+    font-family: Arial, sans-serif; /* Establecer una fuente base */
+    font-size: 16px; /* Tamaño de fuente base */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+/* Establecer estilos para los elementos HTML */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal; /* Restablecer el peso de la fuente para los encabezados */
+}
+
+ul, ol {
+    list-style: none; /* Eliminar los estilos de lista predeterminados */
+}

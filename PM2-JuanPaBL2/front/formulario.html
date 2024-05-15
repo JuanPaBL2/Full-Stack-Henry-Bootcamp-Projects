@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/reset.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+        <!--SECCION BARRA NAVEGACION-->
+        <main class="contenedor-h1-barraNav">
+            <H1 id="h1-formu"><span>r</span>Pylot</H1>
+                <div id="contenedor-formularios">
+                    <ul class="barra-navegacion">
+                        <li class="li">FORMULARIO</li>
+                        <a href="http://127.0.0.1:5500/PM2-JuanPaBL2/front/index.html"><li class="li">PELICULAS</li></a>
+                        <a href="http://127.0.0.1:5500/PM2-JuanPaBL2/front/series.html"><li class="li">SERIES</li></a>
+                        <a href="http://127.0.0.1:5500/PM2-JuanPaBL2/front/best.html"><li class="li">BEST</li></a>
+                    </ul>
+                </div>
+        </main>
+
+    
+        <form class="pb-0 " onsubmit="validarForm(event)">
+            <div id="contenedor-forMovies">
+                <div id="formularioS">
+                    <ul id="ulf" class="text-center m-0 p-0 text-white">
+                        <h1 id="h11">FORMULARIO DE PELICULAS</h1>
+                        <li>
+                            <label>titulo</label><br>
+                            <input id="titulo" placeholder="introduzca el titulo">
+                        </li>
+                        
+                        <li>
+                            <br><label>año</label><br>
+                            <input id="año" placeholder="introduzca el año">
+                        </li>
+                        <li>
+                            <br><label>director</label><br>
+                            <input id="director" placeholder="el director" >
+                        </li>
+                        <li>
+                            <br><label>duracion</label><br>
+                            <input id="duracion" placeholder="introduzca el director">
+                        </li>
+                        <!--CHECKBOX-->
+                        <li class="form-group">
+                            <br><label>genero:</label><br><br> 
+
+                            <label>sci-fi</label>
+                            <input value="sci-fi" placeholder="introduzca el genero" type="checkbox"><br>
+                            <label>action</label>
+                            <input value="action" placeholder="introduzca el genero" type="checkbox"><br>
+                            <label>comedy</label>
+                            <input value="comedy" placeholder="introduzca el genero" type="checkbox"><br>
+                            <label>drama</label>
+                            <input value="drama" placeholder="introduzca el genero" type="checkbox"><br>
+                            <label>adventure</label>
+                            <input value="adventure" placeholder="introduzca el genero" type="checkbox"><br>
+                            <label>terror</label>
+                            <input value="terror" placeholder="introduzca el genero" type="checkbox"><br>
+                            <label>romance</label>
+                            <input value="romance" placeholder="introduzca el genero" type="checkbox"><br>     
+                        </li>
+                        <li>
+                            <br><label>rate</label><br>
+                            <input id="rate" placeholder="introduzca el puntaje" type="number">
+                        </li>
+                        <li>
+                            <br><label>poster</label><br>
+                            <input id="poster" placeholder="introduzca el poster" type="url">
+                        </li>
+
+                        <div class="text-center pb-4 mt-5">
+                            <button id="botonEnviar" class="btn btn-secondary mt-2" type="submit">Enviar</button> 
+                            <button id="botonLimpiar" class="btn btn-secondary mt-2" >Limpiar</button> 
+                        </div> 
+                    </ul>
+                </div>
+            </div>
+        </form>
+        
+        <footer  class="h6 small text-white pb-2 bg-dark">
+            &copy; Todos los derechos reservados.
+        </footer>
+        <script src="./public/form.js"></script>
+
+        <!--IMPORTO Boostrap-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    </body>
+</html>

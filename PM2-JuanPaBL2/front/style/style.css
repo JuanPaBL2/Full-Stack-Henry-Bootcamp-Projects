@@ -1,0 +1,230 @@
+/*____________________________SECCION 1____________________________*/
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+#contienePa{
+    background-color: #000000;
+}
+.barra-promocion{
+    margin-right: 140px;
+}
+header {
+    text-align: center;
+    font-size: small;
+    overflow: hidden; /* Oculta el texto que desborde */
+    white-space: nowrap; /* Evita que el texto se desborde a una nueva línea */
+    animation: scrollText 20s linear infinite; /* Aplica la animación al texto */
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: white;
+}
+
+
+#gratis{
+    color: red;
+    font-weight: 700;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%); /* Desplaza el texto completamente fuera del contenedor */
+    }
+    100% {
+        transform: translateX(-100%); /* Desplaza el texto completamente dentro del contenedor */
+    }
+} 
+
+/*____________________________SECCION 2____________________________*/
+
+.contenedor-h1-barraNav{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: gray;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding-top: 0px;
+    
+}
+
+
+/*TITULO H1*/
+main h1{
+    font-size: 25px;
+    margin: auto;
+    margin-left: 10px;
+    
+}
+
+/*R ROJA DE TITULO H1*/
+main h1 span{
+    color: rgb(155, 2, 2);
+}
+
+.barra-navegacion{
+    display: flex;
+    list-style-type: none;
+    margin-right: 750px;
+    font-size: 15px;
+    margin-bottom: 8px;
+    margin-top: 30px;
+    
+}
+
+.barra-navegacion:hover{
+    cursor: pointer;
+}
+
+.li{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*________________________________________SECCION 3: INDEX (Peliculas)___________________________*/
+
+#contenedor-tarjetas{
+  background-color: black;
+  padding-bottom: 1px;
+}
+
+#lista-tarjetas{
+  padding-top: 30px;
+}
+
+.contenedorG-tarjetas-best {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .tarjeta-best {
+    width: 300px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .tarjeta-best:hover {
+    transform: translateY(-5px);
+  }
+  
+  .tarjeta-best .contenedor-tarjeta {
+    padding: 15px;
+  }
+  
+  .tarjeta-best .imagen-tarjeta {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .tarjeta-best .informacion {
+    margin-top: 10px;
+  }
+  
+  .tarjeta-best .titulo {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .tarjeta-best .detalles span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+
+
+/*____________BEST (Mejor pelicula)____________*/
+.contenedor-tarjeta-b {
+  width: 300px;
+  margin: 0 auto; /* Para centrar horizontalmente */
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo transparente */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  
+}
+
+.imagen-tarjeta {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.informacion {
+  text-align: center;
+}
+
+
+.titulo {
+  color: black; /* Ajusta el color del título */
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 30px;
+}
+
+
+.detalles {
+  font-size: 14px;
+  color: black; /* Ajusta el color del texto de los detalles */
+}
+
+
+#contentt{
+  background-image: url('https://i.blogs.es/ccecab/blade-runner-2049-critica-espinof/1366_2000.jpeg');
+  padding-top: 2px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*____________SERIES____________*/
+
+.tarjeta-series {
+  width: 300px; /* Tamaño fijo para las tarjetas */
+  transition: transform 0.3s ease-in-out;
+}
+
+.tarjeta-series:hover {
+  transform: translateY(-5px);
+}
+  
+/*____________FORMULARIO MOVIES____________*/
+#contenedor-forMovies{
+  display:block;
+  padding-top: 20px;
+  margin-top: 0px;
+  background-image: url('../img/jack-reacher-star-wars-interstellar-movie-john-wick-wallpaper-preview.jpg');
+  padding-bottom: 4px;
+  margin-bottom: 0px;
+}
+
+#h11{
+  text-align: center;
+  font-size: 23px;
+  color: white;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 10px;
+}
+
+#formularioS{
+  margin: 20px;
+  padding: 20px;
+  border: px solid;
+  text-align: center;
+  
+}
+
+#ulf{
+  border-radius: 5%;
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  display:inline-block;
+}
+
+#h1-formu{
+  padding-left: 50px;
+}

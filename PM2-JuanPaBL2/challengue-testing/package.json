@@ -1,0 +1,14 @@
+{
+  "name": "challengue-testing",
+  "version": "1.0.0",
+  "description": "jest-testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "juan",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
