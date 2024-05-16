@@ -1,6 +1,6 @@
-En este repositorio se alojan los proyectos personales realizados en el bootcamp 'Full Stack Developer' realizado en Soy Henry. Dichos proyectos se fueron construyendo a lo largo de cada modulo del bootcamp haciendo los correspondientes commit y push (ya que estos eran repositorios clonados).
+En este repositorio se alojan los proyectos personales realizados en el bootcamp 'Full Stack Developer' de la academia Soy Henry. Dichos proyectos se fueron construyendo a lo largo de cada modulo del bootcamp, mediante los correspondientes commit y push (ya que estos eran repositorios clonados).
 
-Siendo el proyecto PM1 de menor complejidad, y el PM4 de mayor complejidad. Este ultimo proyecto se centro en una orientacion en front-end, donde nos entregaban un back-end ya construido para permitir enfocarnos mas en explotar la experiencia del lado del cliente, incluyendo conceptos de la UX/UI, ademas de usar tecnologias de estilos como TailwindCSS y la construiccion bajo el framework NEXTJS.
+El proyecto PM1 es el de menor complejidad, y el PM4 de mayor complejidad. Este ultimo se centro en una orientacion al front-end, donde nos entregaban un back-end ya construido para permitir enfocarnos mas en explotar la experiencia del lado del cliente, incluyendo conceptos de la UX/UI, ademas de usar tecnologias de estilos como TailwindCSS y la construiccion bajo el framework NEXTJS.
 
 PM1: Pagina web estatica, sobre la presentacion personal
 
