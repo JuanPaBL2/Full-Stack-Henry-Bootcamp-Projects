@@ -56,7 +56,7 @@ export const LoginComponent: React.FC = (): React.ReactNode => {
   return (
     
     <StyledDetailsContainer>
-      <DivContainer><H2>Login</H2>
+      <DivContainer><H2>Iniciar Sesión</H2>
         <form onSubmit={handleSubmit}>
           <Div>
             <Input

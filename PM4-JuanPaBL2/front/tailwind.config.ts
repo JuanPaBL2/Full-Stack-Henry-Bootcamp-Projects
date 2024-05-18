@@ -20,7 +20,8 @@ const config: Config = {
         customGray: '#f2f2f2',
         bruViolet: '#614ad9',
         pastel: '#f2cc67',
-        mlgray: '#333333'
+        mlgray: '#333333',
+        blueMl: '#3483fa'
       },
       fontFamily: {
         'plus-jakarta-sans': ['"Plus Jakarta Sans"', 'sans-serif'],

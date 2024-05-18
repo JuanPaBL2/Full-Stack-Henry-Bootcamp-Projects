@@ -88,7 +88,7 @@ export const Navbar:React.FC = (): React.ReactNode  => {
         ) : (
           <>
             <MenuItem> 
-              <Link href="/login">LOGIN</Link>
+              <Link href="/login">LOG IN</Link>
             </MenuItem>
             <MenuItem> 
               <Link href="/register">REGISTER</Link>
