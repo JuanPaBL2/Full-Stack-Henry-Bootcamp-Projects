@@ -69,7 +69,7 @@ export default function RootLayout({children,}: Readonly<
             </div>
             <Footer.Divider />
             <div className="w-full sm:flex sm:items-center sm:justify-between">
-              <Footer.Copyright href="#" by="NexusTech" year={2024} className="text-white"/>
+              <Footer.Copyright href="#" by="Desgined by Juan Pablo Del Rosso" year={2024} className="text-white"/>
               <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center ">
                 <Footer.Icon href="#" icon={BsFacebook}  className="text-white"/>
                 <Footer.Icon href="#" icon={BsInstagram}  className="text-white"/>

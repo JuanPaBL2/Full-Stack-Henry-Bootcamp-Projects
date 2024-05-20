@@ -11,6 +11,7 @@ const UserDetailBuy: React.FC = (): React.ReactNode => {
 
     const userOrderHistory = JSON.parse(localStorage.getItem("userOrder") || "{}");
     const [token] = useState(localStorage.getItem("userToken") ?? null);
+    const [prices, setPrices] = useState(null)
 
     useEffect(() => {
         if (!token || !userOrderHistory) {
@@ -18,8 +19,16 @@ const UserDetailBuy: React.FC = (): React.ReactNode => {
         }
     }, );
 
-    console.log(userOrderHistory);
-
+    //suma los precios de los diferentes productos de la compra.
+   useEffect(() => {
+    if (userOrderHistory){
+        const totalPrice = userOrderHistory.products.reduce((sum: number, product: any) => {
+            return sum + product.price;
+        }, 0);
+        setPrices(totalPrice)
+    } 
+   }, [])
+   
     return (
         <>
             {userOrderHistory && (
@@ -44,26 +53,40 @@ const UserDetailBuy: React.FC = (): React.ReactNode => {
                         </div>
                     </aside>
                      {/* Contenido principal */}
-                    <main className="flex-1 bg-customGray text-center">
+                    <main className="flex-1 bg-customGray ">
                         <div className="p-6">
                             {/* Contenido del dashboard */}
-                            <h2 className="text-2xl  text-gray-600">Detalle de ultima compra</h2>
+                            <h2 className="text-2xl text-center text-gray-600">Detalle de ultima compra</h2>
                             <p className="text-gray-600"></p>
                         </div>
                         {/* Tarjetas de historial de compras */}
-
                         <div key={userOrderHistory.id} className="max-w-md mx-auto bg-white shadow-md rounded-md overflow-hidden mb-4">
-                            <div className="p-4">
-                                <p className="text-gray-600">Fecha de compra:</p><p>{fecha(userOrderHistory.date)}</p>
-                                <p className="text-gray-600">Estado: <span className="text-green-500">{userOrderHistory.status}</span></p>
-                                <p className="text-gray-600">Productos:</p>
+                        <div className="p-4">
+                            <div className="flex justify-between">
+                                <b className="font-semibold" >Fecha de compra:</b>
+                                <p className="text-end">{fecha(userOrderHistory.date)}</p>
+                            </div>
+                            <br></br>
+                            <div className="flex justify-between">
+                                <b className="font-semibold" >Estado:</b>
+                                <p className="text-end text-green-500">{userOrderHistory.status}</p>
+                            </div>
+                            <br></br>
+                            <div>
+                                <b className="font-semibold" >Productos:</b>
                                 <ul className="list-disc ml-6">
                                     {userOrderHistory.products && userOrderHistory.products.map((product: any) => (
                                         <li key={product.id}>{product.name}</li>
                                     ))}
                                 </ul>
                             </div>
-                        </div>       
+                            <br></br>
+                            <div className="flex justify-between">
+                                <b className="font-semibold" >Precio total:</b>
+                                <p className="text-end">${prices}</p>
+                            </div>
+                        </div>
+                    </div>       
 
                     </main>
                 </div> 
@@ -74,12 +97,4 @@ const UserDetailBuy: React.FC = (): React.ReactNode => {
 
 export default UserDetailBuy;
 
-/*Objeto que contiene el hook userOrderHistory
-    date: "2024-05-08T03:03:44.809Z"
-    id: 6
-    products: Array(1)
-    0: {id: 2, name: 'MacBook Air', description: 'Embrace efficiency and sophistication with the Mac…e your computing experience with the MacBook Air.', price: 999, stock: 10, …}
-    length: 1
-    [[Prototype]]: Array(0)
-    status: "approved" */
 

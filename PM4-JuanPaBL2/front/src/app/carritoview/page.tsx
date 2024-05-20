@@ -16,12 +16,15 @@ const Carrito: React.FC = ():React.ReactNode => {
     const router = useRouter();
 
     const [cart, setCart] = useState<IProduct[]>([]);
+    const [cartPrice, setCartPrice] = useState<number | null>(null);
     const [token] = useState(localStorage.getItem("userToken") ?? null); 
     const [isSucces, setItSucces] = useState(false);
     const [errorState, setError] = useState(null)
     const [detailOk, setDetailok] = useState(false)
     const [detailButton, setDetailButton] = useState(false)
 
+    console.log("carrito:", cart);
+    
 
     useEffect(() => {
         const cartFromLocalStorage = localStorage.getItem("newCart");
@@ -53,6 +56,14 @@ const Carrito: React.FC = ():React.ReactNode => {
         localStorage.setItem("newCart", JSON.stringify(filter))
         setCart(filter)
     }
+
+    useEffect(() => {
+        const totalPrice = cart.reduce((sum: number, product: any) => {
+            return sum + product.price;
+        }, 0);
+        setCartPrice(totalPrice)
+    }, [cart])
+   
     
     return (
         
@@ -78,11 +89,15 @@ const Carrito: React.FC = ():React.ReactNode => {
                     </div>
                 </div>
                  {/* Tarjeta de resumen de compra */}
-                <div className="bg-white shadow-lg rounded-lg  md:mr-4 md:w-1/3">
+                <div className="bg-white shadow-lg p-1 h-44 rounded-lg md:mr-4 md:w-1/3">
                     <h1 className="text-xl font-semibold mb-2">Resumen de Compra</h1>
                     <hr></hr>
                     <br></br>
-                    <h3 className="text-gray-600 mb-2">Cantidad de productos: {cart.length}</h3><br></br><br></br><br></br><br></br>
+                    <h3 className="text-gray-600 mb-2">Cantidad de productos: {cart.length}</h3>
+                    <div className="flex flex-wrap justify-start items-center">                   
+                        <h3 className="text-gray-600 mb-2 mr-2">Total:</h3>
+                        <p className="text-blueMl mb-2">${cartPrice}</p>
+                    </div>
                     {isSucces && <Component/>} 
                     {errorState && <Component2 error={errorState} />}
                     {detailOk ? ( 
