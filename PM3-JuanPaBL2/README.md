@@ -33,8 +33,8 @@ App full stack sobre un servicio de turnos de un hipotetico establecimiento (en 
 - Registro de usuario 
 - Log in de usuario, desbloquea vista y funcionalidad de turnos
 - Agendar un turno, con validacion de fechas habiles
-- Vista da los turnos
-- Posibilidad de cancelar el turno y ver el estado del mismo.
+- Vista de los turnos
+- Posibilidad de cancelar el turno y ver el estado del mismo
 
 ## Instalacion
 
