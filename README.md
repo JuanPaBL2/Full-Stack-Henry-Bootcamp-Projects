@@ -1,38 +1,28 @@
-En este repositorio se alojan los proyectos personales realizados en el bootcamp 'Full Stack Developer' de la academia Soy Henry. Dichos proyectos se fueron construyendo a lo largo de cada modulo del bootcamp, mediante los correspondientes commit y push (ya que estos eran repositorios clonados).
+# Proyectos Full Stack Dev - Bootcamp Henry
+En este repositorio se alojan los proyectos personales realizados en el bootcamp 'Full Stack Developer' de la academia Soy Henry. Dichos proyectos se fueron construyendo a lo largo de cada modulo del bootcamp (aprox 20 dias), mediante los correspondientes commit y push (ya que estos eran repositorios clonados).
 
 El proyecto PM1 es el de menor complejidad, y el PM4 de mayor complejidad. Este ultimo se centro en una orientacion al front-end, donde nos entregaban un back-end ya construido para permitir enfocarnos mas en explotar la experiencia del lado del cliente, incluyendo conceptos de la UX/UI, ademas de usar tecnologias de estilos como TailwindCSS y la implementacion bajo el framework NEXTJS.
 
-## PM1: Pagina web estatica, sobre la presentacion personal
+Cada proyecto contiene un README con mas detalles sobre su desarrollo y funcionalidad.
 
-    html
-    css 
+---
 
-## PM2: App web Full Stack + Testing, sobre un servicio de peliculas.
+### PM1: Pagina web estatica, sobre la presentacion personal
 
-    Front-End: HTML, CSS, Boostrap, JavaScript vanilla, Axios, Webpack bundle.
+- [![Acceder al Proyecto 1](https://img.shields.io/badge/Acceder%20al%20Proyecto%201-blue)](./PM1-JuanPaBL2)
 
-    Testing: test unitario con Jest.
 
-    Back-End: NodeJS, Express, Dotenv, Middlewares pre-build (Morgan y Cors) + Middlewares personalizados, Moongose.
-    Arquitectura: microservicios.
+### PM2: App web Full Stack + Testing, sobre un servicio de peliculas.
 
-    Base de datos: MongoDB.
+- [![Acceder al Proyecto 2](https://img.shields.io/badge/Acceder%20al%20Proyecto%202-blue)](./PM2-JuanPaBL2)
 
-## PM3: App web Full Stack. Servicio de turnos.
+
+### PM3: App web Full Stack. Servicio de turnos.
     
-    Front-End: Vite, React, Redux toolkit, Typescript, Axios, Styled Components.
+- [![Acceder al Proyecto 3](https://img.shields.io/badge/Acceder%20al%20Proyecto%203-blue)](./PM3-JuanPaBL2)
 
-    Back-End: NodeJS, Express, Typescript, Dotenv, Middlewares pre build (morgan y cors) + middlewares personalizados, typeORM.
-    Arquitectura: microservicios.
 
-    Base de datos: PostgreSQL.
+### PM4: App web Front-End. E-Commerce de tecnologia. (desarrollo exclusivo de la app front-end por la orientacion del modulo cursado).
 
-## PM4: App web Front-End. E-Commerce de tecnologia. (desarrollo exclusivo de la app front-end por la orientacion del modulo cursado).
+- [![Acceder al Proyecto 4](https://img.shields.io/badge/Acceder%20al%20Proyecto%204-blue)](./PM4-JuanPaBL2)
 
-      Front-End: NextJS, React, LocalStorage, Typescript, Axios, Tailwind css, Styled Components, UX/UI.
-
-      Back-End (no desarrollado por mi).
-
-      Base de datos (no desarrollada por mi): PostgreSQL.
-
-      *a este proyecto se le agregaron pequeños detalles luego de entregado en su cursada, dichos detalles se explican en los commits de este repositorio.
