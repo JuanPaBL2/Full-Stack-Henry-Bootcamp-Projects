@@ -1,4 +1,4 @@
-#App de Servicio de peliculas | Proyecto 2 Bootcamp Henry
+# App de Servicio de peliculas | Proyecto 2 Bootcamp Henry
 
 ## Descripcion
 App Full Stack sobre un servicio de peliculas. Desarrollada con HTML, Javascript Vanilla, y CSS + Boostrap del lado del frontend; y NodeJS, Express y Moongose del lado del backend.
