@@ -2,8 +2,8 @@
 
 ## Descripcion
 
-NexusTech es una aplicacion full stack diseñada para montar un e-commerce de tecnologia, incorporando conceptos de UX/UI para mejorar la experiencia del usuario y utilizando un esquema de AUTH para validaciones y funcionalidades especificas.
- Se compone de una aplicacion front-end construida sobre nextJS mediante una arquitectura de microfrontend y una aplicacion back-end construida sobre express, node y typeORM mediante una arquitectura de microservicios.
+NexusTech es una aplicacion full stack de desarrollo frontend especifico, diseñada para montar un e-commerce de tecnologia, incorporando conceptos de UX/UI para mejorar la experiencia del usuario y utilizando un esquema de AUTH para validaciones y funcionalidades especificas.
+ Se compone de una aplicacion front-end construida sobre nextJS mediante una arquitectura de microfrontend y una aplicacion back-end previamente construida sobre express, node y typeORM mediante una arquitectura de microservicios.
 
 ## Tecnologias
 ### front:
