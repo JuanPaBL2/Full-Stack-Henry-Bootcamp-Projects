@@ -10,7 +10,7 @@ NexusTech es una aplicacion full stack de desarrollo frontend especifico, diseñ
 - NextJS
 - React
 - Typescript
-- LocalStorage
+- Persistencia de datos manipulando localstorage
 - Axios
 - Tailwind Css
 - Styled-Components
