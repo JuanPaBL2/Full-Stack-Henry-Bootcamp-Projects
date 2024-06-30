@@ -29,7 +29,7 @@ NexusTech es una aplicacion full stack de desarrollo frontend especifico, diseñ
 ## Funcionalidades
 
 - Registro de usuarios: con validaciones en inputs y logica segun errores de inputs.
-- Inicio de sesion: con uso de token e items sobre lolcastorage para funcionalidades exclusivas de usuarios logeados.
+- Inicio de sesion: con uso de token e items sobre localstorage para funcionalidades exclusivas de usuarios logeados.
 - Filtrar productos: con texto mediante un searchbar
 - Detalle de producto: ver detalle de un producto del home en una ruta apartada.
 - Carrito de compras:
