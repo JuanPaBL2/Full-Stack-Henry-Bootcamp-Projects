@@ -21,7 +21,7 @@ const UserDetailBuy: React.FC = (): React.ReactNode => {
 
     //suma los precios de los diferentes productos de la compra.
    useEffect(() => {
-    if (userOrderHistory){
+    if (userOrderHistory.length > 0){
         const totalPrice = userOrderHistory.products.reduce((sum: number, product: any) => {
             return sum + product.price;
         }, 0);
@@ -31,7 +31,7 @@ const UserDetailBuy: React.FC = (): React.ReactNode => {
    
     return (
         <>
-            {userOrderHistory && (
+            {userOrderHistory.length > 0 && (
                 <div className="flex h-screen font-encode-sans-expanded">
                     {/* Barra lateral */}
                     <aside className="bg-gray-800 w-64 flex-shrink-0">
