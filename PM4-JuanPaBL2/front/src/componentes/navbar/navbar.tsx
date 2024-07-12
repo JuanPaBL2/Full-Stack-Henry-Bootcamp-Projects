@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from 'next/link';
 import { useRouter } from "next/navigation";
+import Cookies from 'js-cookie';
 
 //styles
 import {Menu, MenuButton, MenuItem, Logo, Nav, ImageContainer, Img, SearchInput, SearchInputBurger, MenuItemCarrito, SearchContainer} from './stylo2'
@@ -17,6 +18,7 @@ export const Navbar:React.FC = (): React.ReactNode  => {
   const logOut = () => {
     localStorage.removeItem("userToken")
     localStorage.removeItem("userData");
+    Cookies.remove('token');
     if (window.location.href === 'http://localhost:3000/') {
       window.location.reload();
     } else {

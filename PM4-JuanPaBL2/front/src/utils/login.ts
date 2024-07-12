@@ -1,5 +1,6 @@
 
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
 export const loginUser = async (formData: any, setToken: any, setError: any, setIsSuccess: any, setIsLoading:any) => {
   try {
@@ -8,6 +9,7 @@ export const loginUser = async (formData: any, setToken: any, setError: any, set
       token: response.data.token,
       user: response.data.user
     };
+    Cookies.set('token', userData.token, { expires: 7 })
     localStorage.setItem("userData", JSON.stringify(userData));
     setToken(response.data.token);
     setIsSuccess(true);
