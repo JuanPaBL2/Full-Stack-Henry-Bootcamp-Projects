@@ -29,6 +29,10 @@ export const Button = styled.button`
   padding: 18px; /* Incrementar el padding para hacer el botón más grande */
   border: none;
   border-radius: 5px;
+  @media (max-width: 450px) and (min-width: 300px) and (max-height: 950px) and (min-height: 667px) {
+    padding: 12px;
+    font-size: 14px;
+  }
   ${({ disabled }) => disabled && disabledButtonStyles}
   &:hover {
     transition: 0.2s;
@@ -49,6 +53,11 @@ export const Perror = styled.p`
   color: white;
   padding: 5px;
   margin-top: 8px;
+  @media (max-width: 468px) and (min-width: 300px) and (max-height: 950px) and (min-height: 667px) {
+    font-size: 14px;
+    width: 15%;
+    padding: 5px;
+  }
 `;
 
 export const P = styled.p`
@@ -58,6 +67,7 @@ export const P = styled.p`
   background-color: green;
   color: white;
   padding: 5px;
+
 `;
 
 export const SpanLink = styled.span`
@@ -79,15 +89,21 @@ export const DivContainer = styled.div`
   font-family: 'Encode Sans Expanded';
   text-align: center;
   width: 50%; /* Ancho del contenedor del formulario */
+  @media (max-width: 450px) and (min-width: 300px) and (max-height: 950px) and (min-height: 667px) {
+    width: 70%;
+  }
 `;
 
 export const H2 = styled.h2`
   padding-bottom: 30px;
   font-style: normal;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 75px;
   color: #614ad9;
+  @media (max-width: 550px) and (min-width: 300px) and (max-height: 950px) and (min-height: 667px) {
+    font-size: 20px;
+  }
 `;
 
 /*export const H4 = styled.h1`
@@ -118,6 +134,17 @@ export const Input = styled.input`
   border-radius: 5px;
   border: 1px solid #ccc;
   outline: none;
+  @media (max-width: 550px) and (min-width: 300px) and (max-height: 950px) and (min-height: 667px) {
+    font-size: 14px;
+    width: 100%;
+    &:hover {
+      border: 1px solid #614ad9; 
+    } 
+    &:focus {
+      border: 1px solid #614ad9; /* Cambia el color del borde al enfocar el input */
+      outline: none; /* Quita el borde predeterminado del input cuando está enfocado */
+    }
+  }
   &:hover {
     border: 1px solid #614ad9; 
   }
@@ -132,5 +159,9 @@ export const DivAun = styled.div`
   margin: 0px;
   padding-bottom: 2vw;
   padding-top: 20px;
+  @media (max-width: 550px) and (min-width: 300px) and (max-height: 950px) and (min-height: 667px) {
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
 `;
 

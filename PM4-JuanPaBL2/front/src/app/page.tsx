@@ -14,18 +14,18 @@ export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   //ESTADO QUE OBTIENE BOOLEANO DEL LOGIN, A FIN DE ACTUALIZAR LA PAGINA.
-  const [logStatus] = useState(JSON.parse(localStorage.getItem("LoginStatus") || "false"))
- 
-  //Si el estado local con el LoginStatus es true, borro del localstorage el loginStatus
-  //y recargo la pagina
-  //borrando el loginStatus, fuerzo el estado de logStatus a false. Con esto evito bucle infinito de recargas.
-  useEffect(() => {
-    if (logStatus) {
-      localStorage.removeItem("LoginStatus")
-      window.location.reload();
-    }
-  },[logStatus]);
+  const [logStatus, setLogStatus] = useState(false);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const loginStatus = localStorage.getItem("LoginStatus") || "false";
+      if (loginStatus === "true") {
+        localStorage.removeItem("LoginStatus");
+        setLogStatus(true);
+        window.location.reload();
+      }
+    }
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {

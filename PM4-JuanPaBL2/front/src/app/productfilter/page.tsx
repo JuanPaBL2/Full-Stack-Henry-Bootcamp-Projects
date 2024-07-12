@@ -11,7 +11,7 @@ import { fetchProducts } from "@/utils/products";
 
 
 
-const productFilter: React.FC = (): React.ReactNode => {
+const ProductFilter: React.FC = (): React.ReactNode => {
 
     const [products, setProducts] = useState<IProduct[]>([]);
     //FILTERED
@@ -52,4 +52,4 @@ const productFilter: React.FC = (): React.ReactNode => {
     );
 }
 
-export default productFilter;
+export default ProductFilter;

@@ -4,6 +4,9 @@ import { Button, Modal } from "flowbite-react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
+interface ErrorComponentProps {
+  error: any; // Define el tipo adecuado para 'error' según tu estructura de errores
+}
 export function Component() {
   const [openModal, setOpenModal] = useState(true);
   const router = useRouter()
@@ -34,10 +37,12 @@ export function Component() {
   );
 }
 
-export function Component2({error}: any) {
+export function Component2({error}: ErrorComponentProps) {
   const [openModal, setOpenModal] = useState(true);
   const router = useRouter()
 
+  const errorMessage = error.response?.data?.message || "Error desconocido";
+  
   return (
     <>
       
@@ -46,7 +51,7 @@ export function Component2({error}: any) {
         <Modal.Body>
           <div className="space-y-6">
             <p className="text-base  leading-relaxed text-gray-500 dark:text-gray-400">
-              {error.response.data.message}
+              {errorMessage}
             </p>
           </div>
         </Modal.Body>

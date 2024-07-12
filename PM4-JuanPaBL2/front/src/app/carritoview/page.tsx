@@ -17,7 +17,7 @@ const Carrito: React.FC = ():React.ReactNode => {
 
     const [cart, setCart] = useState<IProduct[]>([]);
     const [cartPrice, setCartPrice] = useState<number | null>(null);
-    const [token] = useState(localStorage.getItem("userToken") ?? null); 
+    //const [token] = useState(localStorage.getItem("userToken") ?? null); 
     const [isSucces, setItSucces] = useState(false);
     const [errorState, setError] = useState(null)
     const [detailOk, setDetailok] = useState(false)
@@ -37,19 +37,10 @@ const Carrito: React.FC = ():React.ReactNode => {
     const despacharCompra = () => { 
         setDetailButton(true)
         setTimeout(() => {
-            despacharCompraReq(cart, token, setCart, setItSucces, setError, setDetailok)
+            despacharCompraReq(cart, setCart, setItSucces, setError, setDetailok);
             setDetailButton(false)
-        },1500)
+        }, 1500)
     };
-
-
-     //si el token del usuario se borra por el log out, el carrito se vacia y redirige a home.
-     useEffect(() => {
-        if (!token) {
-            localStorage.removeItem("newCart");
-            router.push("/")
-        } 
-    }, []);
 
     const handlerRemove = (productId : number) => {
         const filter = cart.filter(product => product.id !== productId)
@@ -58,22 +49,31 @@ const Carrito: React.FC = ():React.ReactNode => {
     }
 
     useEffect(() => {
-        const totalPrice = cart.reduce((sum: number, product: any) => {
-            return sum + product.price;
+        const totalPrice = cart.reduce((sum: number, product: IProduct) => {
+            const price = typeof product.price === 'string' ? parseFloat(product.price) : product.price;
+            return sum + price;
         }, 0);
-        setCartPrice(totalPrice)
-    }, [cart])
+        setCartPrice(totalPrice);
+    }, [cart]);
    
+    /*i el token del usuario se borra por el log out, el carrito se vacia y redirige a home.
+    useEffect(() => {
+        const token = localStorage.getItem("accessToken");
+        if (!token) {
+            localStorage.removeItem("newCart");
+            router.push("/")
+        } 
+    }, []);*/
     
     return (
         
         <div className="bg-customGray pt-20 min-h-screen">
             <div className="container  px-7 py-8 flex flex-col md:flex-row">
                 {/* Tarjeta del carrito */}
-                <div className="bg-white shadow-lg mr-20 rounded-lg  md:w-2/3">
-                    <h1 className="text-2xl font-semibold mb-4">Carrito de Compras</h1>
+                <div className="bg-white shadow-lg mr-20 rounded-lg w-full sm:w-full md:w-full">
+                    <h1 className="text-2xl font-semibold  mb-4">Carrito de Compras</h1>
                     <hr></hr>
-                    <div className="flex flex-col">
+                    <div className="flex sm:text-sm md:text-lg flex-col">
                         {cart.map((product) => (
                             <>
                                 <div key={product.id} className="bg-white flex flex-row justify-between items-start rounded-lg p-4">

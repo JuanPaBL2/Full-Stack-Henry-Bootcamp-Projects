@@ -1,6 +1,13 @@
 
 import styled, { css } from 'styled-components';
 
+interface ButtonProps {
+  disabled?: boolean;
+}
+
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  error?: boolean;
+}
 const disabledButtonStyles = css`
   opacity: 0.6; /* Reducir la opacidad para dar una apariencia desactivada */
   pointer-events: none; /* Deshabilitar los eventos del puntero */
@@ -13,6 +20,10 @@ export const StyledDetailsContainer = styled.div`
   padding-top: 4vw;
   padding-bottom: 8vw;
   background-color: #f2f2f2;
+  @media (max-width: 450px) and (min-width: 300px) and (max-height: 950px) and (min-height: 667px) {
+   padding-top: 15vw;
+   padding-bottom: 8vw;
+  }
 `;
 
 export const Perror = styled.p`
@@ -21,6 +32,9 @@ export const Perror = styled.p`
   background-color: red;
   color: white;
   padding: 5px;
+  @media (max-width: 450px) and (min-width: 300px) and (max-height: 950px) and (min-height: 667px) {
+
+  }
 `;
 
 export const Perror2 = styled.p`
@@ -29,6 +43,9 @@ export const Perror2 = styled.p`
   background-color: red;
   color: white;
   padding: 5px;
+  @media (max-width: 450px) and (min-width: 300px) and (max-height: 950px) and (min-height: 667px) {
+    
+  }
 `;
 
 
@@ -38,6 +55,9 @@ export const P = styled.p`
   background-color: green;
   color: white;
   padding: 5px;
+  @media (max-width: 450px) and (min-width: 300px) and (max-height: 950px) and (min-height: 667px) {
+    
+  }
 `;
 
 export const DivContainer = styled.div`
@@ -62,7 +82,10 @@ export const H2 = styled.h2`
   line-height: 75px;
   font-family: 'Encode Sans Expanded';
   text-align: center;
-  color: #614ad9;`
+  color: #614ad9;
+  @media (max-width: 450px) and (min-width: 300px) and (max-height: 950px) and (min-height: 667px) {
+    font-size: 22px;
+  }`
 
 
 export const Div = styled.div`
@@ -77,7 +100,7 @@ export const Label = styled.label`
   padding-right: 30px;
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   width: 70%;
   max-width: 250px;
@@ -92,9 +115,15 @@ export const Button = styled.button`
   color: white;
   font-size: 18px; /* Incrementar el tamaño de la fuente */
   margin-top: 20px;
+  @media (max-width: 450px) and (min-width: 300px) and (max-height: 950px) and (min-height: 667px) {
+    font-size: 13px;
+    padding: 18px;
+    border-radius: 5px;
+    width: 50%;
+  }
 `;
 
-export const Input = styled.input`
+export const Input = styled.input<InputProps>`
   width: 70%; /* Ancho del input al 100% */
   padding: 12px;
   border-radius: 5px;
@@ -111,4 +140,9 @@ export const Input = styled.input`
     border: 1px solid  ${({ error }) => (error ? 'red' : '#614ad9')}; /* Cambia el color del borde al enfocar el input */
     outline: none; /* Quita el borde predeterminado del input cuando está enfocado */
   }
+  @media (max-width: 450px) and (min-width: 300px) and (max-height: 950px) and (min-height: 667px) {
+    font-size: 15px;
+    width: 90%;
+  }
+    
 `;

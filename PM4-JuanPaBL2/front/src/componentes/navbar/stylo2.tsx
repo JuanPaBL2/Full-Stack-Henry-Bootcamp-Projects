@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { IMenuProps } from '@/interfaces/interfazProducts';
 
 export const StyledHeading = styled.h2`
   position: relative;
@@ -34,7 +35,7 @@ export const SearchInput = styled.input`
   }
 `;
 
-export const SearchInputBurger = styled.input`
+export const SearchInputBurger = styled.input<IMenuProps>`
   display: none;
   @media (max-width: 768px) {
     padding-top: 10px;
@@ -43,7 +44,7 @@ export const SearchInputBurger = styled.input`
     border: 1px solid #ccc;
     margin-top: 10px;
     color: black;
-    display: ${({ isOpen }) => (isOpen ? "none" : "flex")}; 
+    display: ${({ isOpen }) => (isOpen && "flex")}; 
   }
 `;
 
@@ -105,12 +106,12 @@ export const MenuButton = styled.div`
 
   @media (max-width: 768px) {
     display: flex; /* Se muestra en dispositivos móviles */
-    margin-left: 30%
-    margin-right: 30%
+    margin-left: 15%;
+    color: white;
   }
 `;
 
-export const Menu = styled.ul`
+export const Menu = styled.ul<IMenuProps>`
   display: flex;
   list-style: none;
   color: white;
@@ -121,6 +122,7 @@ export const Menu = styled.ul`
     max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
     overflow: hidden;
     transition: max-height 0.3s ease;
+    margin-left: 20px;
   }
 `;
 
@@ -160,4 +162,7 @@ export const MenuItem = styled.li`
 export const SearchContainer = styled.div`
   display: flex;
   align-items: center; /* Alinea verticalmente los elementos */
+   @media (max-width: 768px) {
+   display: none;
+   }
 `;

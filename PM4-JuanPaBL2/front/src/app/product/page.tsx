@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect } from "react";
-import {CardTitle, CardNumber, Card, Card2, ProductImage2 } from "@/componentes/card/stylo";
+import {CardTitle, CardNumber, Card, Card2, ProductImage2, CardDetail  } from "@/componentes/card/stylo";
 import { useState } from "react";
 import { IProduct } from "@/interfaces/interfazProducts";
 import { useRouter } from "next/navigation";
@@ -34,7 +34,7 @@ const ProductDetail: React.FC = (): React.ReactNode => {
                                 <ProductImage2 key={index} src={product.image} alt="Imagen del producto" />
                             ))}
                         </Card2>
-                        <Card>
+                        <CardDetail>
                             <CardTitle> Detalle del Producto<br/></CardTitle>
                             <hr/>
                             <br/>
@@ -50,7 +50,7 @@ const ProductDetail: React.FC = (): React.ReactNode => {
                                 </div>
                             ))}<br/><br/>
 
-                        </Card>
+                        </CardDetail>
                     </div>
             ) : (<div className="py-20" style={{ display: 'flex', justifyContent: 'center' }}> nada por aqui.</div>)}
         </>

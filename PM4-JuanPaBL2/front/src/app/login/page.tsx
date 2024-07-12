@@ -8,7 +8,7 @@ import { loginUser } from "@/utils/login";
 import { useRouter } from "next/navigation";
 
 
-export const LoginComponent: React.FC = (): React.ReactNode => {
+const LoginComponent: React.FC = () => {
   //ESTADOS
   const [formData, setFormData] = useState<Login>({
     email: '',
@@ -21,18 +21,25 @@ export const LoginComponent: React.FC = (): React.ReactNode => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorState, setError] = useState(null);
   //ESTADO DEL TOKEN. Actualiza el valor del token y luego aplica metodo para guardar en localStorge
-  const [token, setToken] = useState(localStorage.getItem("userToken") ?? null);
-
+  const [token, setToken] = useState<string | null>(null);
 
   useEffect(() => {
-    //si el token cambia de estado, se atcualiza el token en el localstorage
-    if (token) {
-      localStorage.setItem("userToken", token);
-    } else {
-      localStorage.removeItem("userToken");
+    if (typeof window !== "undefined") {
+      const storedToken = localStorage.getItem("userToken");
+      if (storedToken) {
+        setToken(storedToken);
+      }
     }
-    //useEffect ejecutara los metodos setItem y removeItem con el token
-    //solo solo si cambia el valor de token
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (token) {
+        localStorage.setItem("userToken", token);
+      } else {
+        localStorage.removeItem("userToken");
+      }
+    }
   }, [token]);
 
 

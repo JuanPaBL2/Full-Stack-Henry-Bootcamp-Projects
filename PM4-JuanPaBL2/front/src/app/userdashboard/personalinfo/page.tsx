@@ -4,17 +4,24 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
+interface UserData {
+    user: {
+        name: string;
+        email: string;
+        phone: string;
+    };
+}
 const PersonalInfo: React.FC = (): React.ReactNode => {
     const router = useRouter()
 
     // Obtener los datos del usuario del local storage
-    const userData = JSON.parse(localStorage.getItem("userData") || "{}");
-
-    const [token] = useState(localStorage.getItem("userToken") ?? null);
+    const [userData, setUserData] = useState<UserData| null>(null)
     
     useEffect(() => {
-        if (!token) {
-            router.push("/")
+        const storedUserData = localStorage.getItem("userData");
+        if (storedUserData) {
+            const userDataParsed: UserData = JSON.parse(storedUserData);
+            setUserData(userDataParsed);
         }
     }, []);
 
@@ -28,7 +35,7 @@ const PersonalInfo: React.FC = (): React.ReactNode => {
                         <div className="h-full flex flex-col justify-between pt-4">
                             {/* Logo o título */}
                             <div className="py-4 px-6">
-                                <h1 className="text-white text-2xl font-bold">Dashboard</h1>
+                                <h1 className="text-white text-2xl sm:text-xs my-custom-class font-bold">Dashboard</h1>
                             </div>
                             {/* Navegación */}
                             <nav className="flex-1">
@@ -52,7 +59,7 @@ const PersonalInfo: React.FC = (): React.ReactNode => {
                         {/* Tarjetas */}
                         <div className="flex mb-32 py-64 justify-center items-center font-encode-sans-expanded pt-10">
                             <div className="max-w-md w-full bg-white shadow-md rounded-lg p-6">
-                                <h1 className="text-2xl font-semibold  mb-4">Información Personal</h1>
+                                <h1 className="text-2xl font-semibold titulos-card mb-4">Información Personal</h1>
                                 {/* Tarjeta de datos del usuario */}
                                 <div className="grid grid-cols-1 gap-4">
                                     {/* Nombre */}

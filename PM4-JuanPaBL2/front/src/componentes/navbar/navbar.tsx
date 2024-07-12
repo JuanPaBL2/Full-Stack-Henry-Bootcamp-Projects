@@ -17,7 +17,11 @@ export const Navbar:React.FC = (): React.ReactNode  => {
   const logOut = () => {
     localStorage.removeItem("userToken")
     localStorage.removeItem("userData");
-    window.location.reload()
+    if (window.location.href === 'http://localhost:3000/') {
+      window.location.reload();
+    } else {
+      router.push("/");
+    }
     setToken(null);
   }
 
@@ -61,13 +65,12 @@ export const Navbar:React.FC = (): React.ReactNode  => {
       </MenuButton>
       <SearchContainer>
         <SearchInput placeholder="buscar..." type="text" value={search.item} name="item" onChange={inputHandler} />
-        <img onClick={itemSubmit} className=" sm:hidden h-12 cursor-pointer" src="https://picjj.com/images/2024/05/11/NnJG7.png" alt="images removebg preview" />
+        <img onClick={itemSubmit} className=" sm:block h-12 cursor-pointer" src="https://picjj.com/images/2024/05/11/NnJG7.png" alt="images removebg preview" />
       </SearchContainer>   
       <Menu isOpen={isOpen}>
         <MenuItem >
           <Link href="/">HOME</Link>
         </MenuItem>
-        <MenuItem>OFERTAS</MenuItem>
         {token ? (
             <>
             <MenuItem>
@@ -83,7 +86,7 @@ export const Navbar:React.FC = (): React.ReactNode  => {
                 <p onClick={logOut}>LOG OUT</p>
               </Link>
             </MenuItem>
-            <SearchInputBurger placeholder="buscar..." type="text" name="item" value={search.item} onChange={inputHandler} onKeyDown={handleKeyPress}/>
+            <SearchInputBurger placeholder="buscar..." type="text" name="item" value={search.item} onChange={inputHandler} isOpen={isOpen} onKeyDown={handleKeyPress}/>
             </>
         ) : (
           <>
@@ -93,7 +96,7 @@ export const Navbar:React.FC = (): React.ReactNode  => {
             <MenuItem> 
               <Link href="/register">REGISTER</Link>
             </MenuItem>
-            <SearchInputBurger placeholder="buscar..." type="text" name="item" value={search.item} onChange={inputHandler} onKeyDown={handleKeyPress}/>
+            <SearchInputBurger placeholder="buscar..." type="text" name="item" value={search.item} onChange={inputHandler} isOpen={isOpen} onKeyDown={handleKeyPress}/>
           </>
         )}
       </Menu>

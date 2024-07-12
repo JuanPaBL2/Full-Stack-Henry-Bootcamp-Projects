@@ -3,11 +3,21 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { historyBuy } from "@/utils/historybuyd";
 import { OrderHistoryChild } from "../orderHistory/orderHistoryChild";
+import { IOrder } from "@/interfaces/interfazProducts";
 
-export const OrderHistory: React.FC = (): React.ReactNode => {
+const OrderHistory: React.FC = (): React.ReactNode => {
     
-    const [token] = useState(localStorage.getItem("userToken") || null)
-    const [orderHistory, setOrderHistory] = useState([])
+    const [token, setToken] = useState<string | null>(null);
+    const [orderHistory, setOrderHistory] = useState<IOrder[]>([])
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const userToken = localStorage.getItem("userToken");
+            if (userToken) {
+                setToken(userToken);
+            }
+        }
+    }, []);
 
     useEffect(() => {
         if (token) {

@@ -2,3 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@media (min-width: 350px) and (max-width: 667px) {
+    .my-custom-class {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 667px) {
+    .ancho-dashboard {
+        width: 30%;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 667px) {
+    .padding-card {
+        padding: 14px;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 667px) {
+    .titulos-card {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 667px) {
+    .text-card {
+        font-size: 10px;
+    }
+}
+
+
+@media (min-width: 350px) and (max-width: 667px) {
+    .titulo-dashboard {
+        font-size: 18px;
+    }
+}
+

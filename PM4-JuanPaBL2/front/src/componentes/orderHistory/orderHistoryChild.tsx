@@ -1,10 +1,16 @@
 'use client'
 import React, {useEffect, useState} from "react";
 import { fecha } from "@/utils/dateFunction";
+import { IOrder } from "@/interfaces/interfazProducts";
 
-export const OrderHistoryChild: React.FC = ({order}: any): React.ReactNode => {
+interface OrderHistoryChildProps {
+    order: IOrder;
+}
 
-    const [orderPrice, setOrderPrice] = useState(null)
+
+export const OrderHistoryChild: React.FC<OrderHistoryChildProps> = ({ order }) => {
+
+    const [orderPrice, setOrderPrice] = useState<number | null>(null);
 
     useEffect(() => {
         if (order){

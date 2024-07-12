@@ -8,11 +8,21 @@ export interface IProduct {
     image: string;
 }
 
+export interface IMenuProps {
+    isOpen: boolean;
+}
+
 export interface Login {
     email: string,
     password: string;
 }
 
+export interface IOrder {
+    id: string;
+    date: string;
+    status: string;
+    products: IProduct[];
+  }
 
 
 export interface LoginError {
