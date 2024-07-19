@@ -83,23 +83,21 @@ const Login = () => {
             ¿aun no te registraste? <br></br>
             <Link to='/register'><p>hacelo acá</p></Link><br></br>
           </DivAun>
-        <ButtonContainer>
-          <Button
-            type="submit"
-            disabled={
-              isLoading || !(
-                formData.username.trim() &&
-                formData.password.trim()
-              )
-            }
-          >
-            {isLoading ? 'Enviando...' : 'Logearse'}
-          </Button>
-        </ButtonContainer>
-
+          <ButtonContainer>
+            <Button
+              type="submit"
+              disabled={
+                isLoading || !(
+                  formData.username.trim() &&
+                  formData.password.trim()
+                )
+              }
+            >
+              {isLoading ? 'Enviando...' : 'Logearse'}
+            </Button>
+          </ButtonContainer>
           {isSuccess && <P>¡Login  exitoso!</P>}
           {error && <Perror>{error}</Perror>}
-
         </form>
       </DivContainer>
     </StyledDetailsContainer>

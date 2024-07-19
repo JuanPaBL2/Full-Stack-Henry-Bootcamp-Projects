@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
-// Estilos con styled-components
-
 export const Section = styled.section`
   padding: 40px;
   background-color: #f7f7f7;
+  height: full;
 `;
 
 export const SectionTitle = styled.h1`
@@ -31,6 +30,7 @@ export const CardContainer = styled.div`
 export const Card = styled.div`
   padding: 20px;
   border-radius: 8px;
+  border-top: 4px solid #604ad8;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -49,7 +49,9 @@ export const CardNumber = styled.span`
 
 export const FooterContainer = styled.footer`
   text-align: center;
-  padding-bottom: 5px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  padding: 10px;
   background-color: #333;
   color: #fff;
+  margin-top: auto; /* Asegura que el footer esté al final de la página */
 `;

@@ -7,6 +7,7 @@ import { MisTurnos } from './MisTurnos'
 import CreateTurn from './CreateTurn'
 import { Section, SectionTitle, SectionSubtitle, CardContainer, Card, CardTitle, CardNumber } from '../styles/style-components/stylo-home'
 
+
 export const Home = () => {
 
     return (

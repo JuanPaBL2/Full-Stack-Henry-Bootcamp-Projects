@@ -16,7 +16,7 @@ export const ButtonContainer = styled.div`
 export const Button = styled.button`
   display: inline-block;
   cursor: pointer;
-  width: 100%; /* Cambiar el ancho del botón al 100% */
+  width: 50%; /* Cambiar el ancho del botón al 100% */
   max-width: 250px; /* Establecer un ancho máximo para evitar que sea demasiado grande en pantallas grandes */
   padding: 12px; /* Incrementar el padding para hacer el botón más grande */
   border: none;
@@ -42,10 +42,10 @@ export const P = styled.p`
   background-color: green;
   color: white;
   padding: 5px;
+  width: 50%;
 `;
 
 export const DivContainer = styled.div`
-  display: inline-block;
   color: white;
   border: 2px solid black;
   border-radius: 15px;
@@ -65,6 +65,7 @@ export const DivContainer = styled.div`
   }
 `;
 
+
 export const H2 = styled.h2`
   padding-bottom: 20px;
 `;
@@ -82,7 +83,7 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  width: 70%; /* Ancho del input al 100% */
+  width: 50%; /* Ancho del input al 100% */
   padding: 12px; /* Incrementar el padding para hacer el input más grande */
   border-radius: 5px;
   border: 1px solid #ccc;

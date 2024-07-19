@@ -128,6 +128,7 @@ const Register = () => {
           >
             {isLoading ? 'Enviando...' : 'Registrarse'}
           </Button>
+          <br></br>
 
           {isSuccess && <P>¡Registro exitoso!</P>}
           {error && <Perror>{error}</Perror>}

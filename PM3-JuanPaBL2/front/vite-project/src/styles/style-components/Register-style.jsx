@@ -5,7 +5,7 @@ export const StyledDetailsContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 80px;
-  padding-bottom: 80px;
+  margin-bottom: 80px;
 `;
 
 export const Perror = styled.p`
@@ -22,7 +22,10 @@ export const P = styled.p`
   background-color: green;
   color: white;
   padding: 5px;
+  width: 50%;
 `;
+
+
 
 export const DivContainer = styled.div`
   color: white;
@@ -62,7 +65,7 @@ export const Label = styled.label`
 
 export const Button = styled.button`
   cursor: pointer;
-  width: 100%;
+  width: 30%;
   padding: 12px; /* Incrementar el padding para hacer el botón más grande */
   border: none;
   border-radius: 5px;

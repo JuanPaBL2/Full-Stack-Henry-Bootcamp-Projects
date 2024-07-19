@@ -42,6 +42,7 @@ export const MenuItem = styled.li`
 
   &:hover {
     transform: translateY(-3px);
+    filter: brightness(100);
   }
   
 `;
