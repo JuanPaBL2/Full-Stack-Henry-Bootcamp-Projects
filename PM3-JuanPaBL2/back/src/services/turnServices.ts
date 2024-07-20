@@ -25,7 +25,7 @@ export const createTurnService = async (turnData: TurnDto): Promise<Turn>  => {
  
  }
 
-//REVISAR ESTE SERVICIO: error al solicitar put en NaN
+
 export const cancelTurnService = async (id: number): Promise<Turn | null> => {
     const turn: Turn | null = await turnModel.findOneBy({id});
 
@@ -33,10 +33,10 @@ export const cancelTurnService = async (id: number): Promise<Turn | null> => {
         throw new Error(`No se encontró un turno con el ID: ${id}`);
     }
    
-    // Cambiar el estado del turno a "cancelled"
+    
     turn.status = "cancelled";
 
-    // Guardar el turno actualizado en la base de datos
+    
     await turnModel.save(turn);
 
     return turn;
@@ -44,8 +44,8 @@ export const cancelTurnService = async (id: number): Promise<Turn | null> => {
 
 
 export const getAllTurnsService = async (): Promise<Turn[]> => {
-    const turns = await turnModel.find(); // Busca todos los turnos en la base de datos
-    return turns; // Retorna el arreglo de turnos
+    const turns = await turnModel.find(); 
+    return turns; 
 }
 
 
@@ -56,7 +56,7 @@ export const getTurnByIdService = async (id: number): Promise<Turn | null> => {
             id: turn.id,
             date: turn.date,
             time: turn.time,
-            user: turn.user, // Asumiendo que 'userId' está en 'turn'
+            user: turn.user, 
             status: turn.status
         };
     }

@@ -1,16 +1,14 @@
-import { Router} from "express";
-import {controladorCancelAppointment, controladorGetAppointment, controladorGetAppointmentId, controladorNewAppointment} from "../controllers/turnController"
-
-const router = Router();
-
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const turnController_1 = require("../controllers/turnController");
+const router = (0, express_1.Router)();
 /**
  * @swagger
  * tags:
  *   name: Turnos
  *   description: Endpoints para manejar turnos
  */
-
 /**
  * @swagger
  * /turn:
@@ -34,8 +32,7 @@ const router = Router();
  *                     type: string
  *                     description: Fecha del turno
  */
-router.get('/', controladorGetAppointment);
-
+router.get('/', turnController_1.controladorGetAppointment);
 /**
  * @swagger
  * /turn/{id}:
@@ -73,8 +70,7 @@ router.get('/', controladorGetAppointment);
  *                   type: string
  *                   description: Estado del turno
  */
-router.get('/:id', controladorGetAppointmentId);
-
+router.get('/:id', turnController_1.controladorGetAppointmentId);
 /**
  * @swagger
  * /turn/schedule:
@@ -120,8 +116,7 @@ router.get('/:id', controladorGetAppointmentId);
  *                   type: object
  *                   description: Información del usuario
  */
-router.post('/schedule', controladorNewAppointment);
-
+router.post('/schedule', turnController_1.controladorNewAppointment);
 /**
  * @swagger
  * /turn/cancel/{id}:
@@ -160,7 +155,5 @@ router.post('/schedule', controladorNewAppointment);
  *                   description: Estado del turno
  *                   example: cancelled
  */
-router.put("/cancel/:id", controladorCancelAppointment)
-
-export default router;
-
+router.put("/cancel/:id", turnController_1.controladorCancelAppointment);
+exports.default = router;

@@ -18,14 +18,13 @@ export const controladorGetAppointment = async (req: Request, res: Response) => 
 export const controladorGetAppointmentId = async (req: Request, res: Response) => {
     try {
         const turnId = parseInt(req.params.id); // Obtén el ID del turno de los parámetros de la URL
-        // Llama al servicio para obtener el detalle del turno por su ID
+        //Llama al servicio para obtener el detalle del turno por su ID
         const turn = await getTurnByIdService(turnId);
-        // Si el turno no se encuentra, devuelve un mensaje de error
+        //Si el turno no se encuentra, devuelve un mensaje de error
         if (!turn) {
             res.status(404).send("Turno no encontrado");
             return;
         }
-        // Envía una respuesta con los detalles del turno
         res.status(200).json(turn);
     } catch (error:any) {
         res.status(500).json({error: error.message});

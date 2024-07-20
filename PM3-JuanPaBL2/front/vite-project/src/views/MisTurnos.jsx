@@ -21,7 +21,7 @@ export const MisTurnos = () => {
       // Si hay usuario logueado, obtener los turnos correspondientes al usuario
       const fetchData = async () => {
         try {
-          const response = await axios.get(`http://localhost:3000/users/${userGlobal.user.id}`);
+          const response = await axios.get(`http://localhost:3001/users/${userGlobal.user.id}`);
           dispatch(saveUserAppointments(response.data.turnos));
          
         } catch (error) {

@@ -36,7 +36,7 @@ const Register = () => {
 
     try {
       // Realizar la solicitud POST al servidor
-      await axios.post('http://localhost:3000/users/register', formData);
+      await axios.post('http://localhost:3001/users/register', formData);
       setIsSuccess(true);
       setError(null); // Reiniciar el error en caso de éxito
     } catch (error) {

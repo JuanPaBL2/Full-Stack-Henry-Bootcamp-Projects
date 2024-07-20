@@ -50,7 +50,7 @@ const CreateTurn = () => {
             time: hora,
             id: id
           };
-        const response = await axios.post('http://localhost:3000/turn/schedule', turnData)
+        const response = await axios.post('http://localhost:3001/turn/schedule', turnData)
         setIsSuccess(true);
         setError(null);
     } catch (error) {

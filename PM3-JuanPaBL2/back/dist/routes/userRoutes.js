@@ -1,17 +1,15 @@
-import { Router} from "express";
-import { controladorGetUsers, controladorGetUsersId, controladorLogin, controladorRegister} from "../controllers/userControllers";
-
-const router = Router();
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const userControllers_1 = require("../controllers/userControllers");
+const router = (0, express_1.Router)();
 //ENRUTADOR DE USERS
-
 /**
  * @swagger
  * tags:
  *   name: Usuarios
  *   description: Endpoints para manejar usuarios
  */
-
 /**
  * @swagger
  * /users:
@@ -59,8 +57,7 @@ const router = Router();
  *                       type: object
  *                       description: Turnos del usuario
  */
-router.get("/", controladorGetUsers);
-
+router.get("/", userControllers_1.controladorGetUsers);
 /**
  * @swagger
  * /users/{id}:
@@ -127,8 +124,7 @@ router.get("/", controladorGetUsers);
  *                         description: Estado del turno
  *                         example: active
  */
-router.get("/:id", controladorGetUsersId);
-
+router.get("/:id", userControllers_1.controladorGetUsersId);
 /**
  * @swagger
  * /users/register:
@@ -214,8 +210,7 @@ router.get("/:id", controladorGetUsersId);
  *                         description: Estado del turno
  *                         example: active
  */
-router.post("/register", controladorRegister);
-
+router.post("/register", userControllers_1.controladorRegister);
 /**
  * @swagger
  * /users/login:
@@ -253,7 +248,5 @@ router.post("/register", controladorRegister);
  *                   type: string
  *                   description: Contraseña
  */
-router.post("/login", controladorLogin);
-
-
-export default router;
+router.post("/login", userControllers_1.controladorLogin);
+exports.default = router;

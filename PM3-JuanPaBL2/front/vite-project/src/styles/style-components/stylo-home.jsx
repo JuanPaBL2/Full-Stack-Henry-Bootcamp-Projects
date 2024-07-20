@@ -30,7 +30,6 @@ export const CardContainer = styled.div`
 export const Card = styled.div`
   padding: 20px;
   border-radius: 8px;
-  border-top: 4px solid #604ad8;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -45,6 +44,7 @@ export const CardTitle = styled.h3`
 export const CardNumber = styled.span`
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 2rem;
+  color: #604ad8;
 `;
 
 export const FooterContainer = styled.footer`
