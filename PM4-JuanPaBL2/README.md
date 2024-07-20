@@ -45,7 +45,8 @@ NexusTech es una aplicacion full stack de desarrollo frontend especifico, diseñ
     -desactiva funciones, elementos, componentes y rutas exclusivos del usuario logeado.
 
 ## Instalacion
---> o puedes visitar el deploy de este proyecto realizado sobre este mismo repo, pero separado en repo independiente (https://github.com/JuanPaBL2/PM4-Ecommerce-Ficticio-frontend-development-):: [Acceso al deploy](https://pm-4-ecommerce-ficticio-frontend-development.vercel.app/)
+*o puedes visitar el deploy de este proyecto realizado sobre este mismo repo, pero separado en [este repo independiente]((https://github.com/JuanPaBL2/PM4-Ecommerce-Ficticio-frontend-development-) 
+-> [Acceso al deploy](https://pm-4-ecommerce-ficticio-frontend-development.vercel.app/)
 
 
 
