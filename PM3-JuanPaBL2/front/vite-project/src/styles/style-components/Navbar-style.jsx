@@ -39,10 +39,11 @@ export const MenuItem = styled.li`
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: "Plus Jakarta Sans", sans-serif;
-
+  color: white;
   &:hover {
     transform: translateY(-3px);
     filter: brightness(100);
+    color: #604ad8;
   }
   
 `;

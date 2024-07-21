@@ -18,15 +18,16 @@ App full stack sobre un servicio de turnos de un hipotetico establecimiento (en 
 -  Express
 -  Typescript
 -  Dotenv
--  Middlewares pre-build (morgan y cors) + Middlewares personalizados
+-  Middlewares pre-build (morgan y cors)
 -  TypeORM
+-  Documentacion de API: Swagger
 
 ### Base de datos:
 -  PostgreSQL
 
 ### Arquitectura:
 -  back: microservicios
--  front: microfrontend
+
 
 ## Funcionalidades
 

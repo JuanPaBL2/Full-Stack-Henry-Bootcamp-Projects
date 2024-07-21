@@ -15,19 +15,19 @@ const Navbar = () => {
       <Menu>
 
         <MenuItem>
-          <Link style={{ textDecoration: 'none' }} to="/">
+          <Link style={{ textDecoration: 'none', color: 'white' }} to="/">
             Home
           </Link>
         </MenuItem>
         {userGlobal ? (
           <>
             <MenuItem>
-              <Link to="/Misturnos" style={{ textDecoration: 'none' }}>
+              <Link to="/Misturnos" style={{ textDecoration: 'none', color: 'white' }}>
                 Mis Turnos
               </Link>
             </MenuItem>
             <MenuItem>
-              <Link to="/newturn" style={{ textDecoration: 'none' }}>
+              <Link to="/newturn" style={{ textDecoration: 'none', color: 'white' }}>
                 Agendar Turno
               </Link>
             </MenuItem>
@@ -35,12 +35,12 @@ const Navbar = () => {
         ) : (
           <>
             <MenuItem>
-              <Link style={{ textDecoration: 'none' }} to="/register">
+              <Link style={{ textDecoration: 'none', color: 'white' }} to="/register">
                 Register
               </Link>
             </MenuItem>
             <MenuItem>
-              <Link style={{ textDecoration: 'none' }} to="/login">
+              <Link style={{ textDecoration: 'none', color: 'white' }} to="/login">
                 Login
               </Link>
             </MenuItem>
