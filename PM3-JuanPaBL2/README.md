@@ -38,7 +38,8 @@ App full stack sobre un servicio de turnos de un hipotetico establecimiento (en 
 - Posibilidad de cancelar el turno y ver el estado del mismo
 
 ## Instalacion
-
+*o puedes visitar el deploy del frontend [en este link]('https://pm-3-turn-service-frontend-t68h.vercel.app/')
+*[acceder a la documentacion de la API]('https://pm3-turnservice-backend-production.up.railway.app/api/')
 1. Clona el repositorio en tu máquina local.
 2. Instala las dependencias mediante npm install.
 3. Configura las variables de entorno según sea necesario.
