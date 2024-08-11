@@ -30,6 +30,11 @@ export const Button = styled.button`
   margin-top: 0px;
 `;
 
+export const Divmsj = styled.div`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`
 export const Perror = styled.p`
   border-radius: 15px;
   background-color: red;
@@ -42,7 +47,8 @@ export const P = styled.p`
   background-color: green;
   color: white;
   padding: 5px;
-  width: 50%;
+  width: 20%;
+  text-align: center;
 `;
 
 export const DivContainer = styled.div`

@@ -1,7 +1,7 @@
 import React  from 'react';
 import axios from 'axios';
 import { useState } from 'react';
-import { StyledDetailsContainer, DivContainer, H2, Div, Div2, Label, Button, Input, P, Perror, DivAun, ButtonContainer } from "../styles/style-components/Login-style";
+import { StyledDetailsContainer, DivContainer, H2, Div, Div2, Label, Button, Input, P, Perror, DivAun, ButtonContainer, Divmsj } from "../styles/style-components/Login-style";
 
 import {useDispatch} from 'react-redux';
 
@@ -96,8 +96,10 @@ const Login = () => {
               {isLoading ? 'Enviando...' : 'Logearse'}
             </Button>
           </ButtonContainer>
-          {isSuccess && <P>¡Login  exitoso!</P>}
-          {error && <Perror>{error}</Perror>}
+          <Divmsj>
+            {isSuccess && <P>¡Login  exitoso!</P>}
+            {error && <Perror>{error}</Perror>}
+          </Divmsj>
         </form>
       </DivContainer>
     </StyledDetailsContainer>
