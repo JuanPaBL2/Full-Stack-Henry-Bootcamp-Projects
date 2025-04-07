@@ -25,10 +25,6 @@ App full stack sobre un servicio de turnos de un hipotetico establecimiento (en 
 ### Base de datos:
 -  PostgreSQL
 
-### Arquitectura:
--  back: microservicios
-
-
 ## Funcionalidades
 
 - Registro de usuario 
