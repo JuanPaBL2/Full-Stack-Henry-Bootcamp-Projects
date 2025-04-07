@@ -22,9 +22,6 @@ App Full Stack sobre un servicio de peliculas. Desarrollada con HTML, Javascript
 ### Base de datos:
 - MongoDB
 
-### Arquitectura:
--  back: microservicios
-
 ## Funcionalidades
 
 - Renderiza una tarjeta de presentacion de una pelicula, por cada documento de datos de peliculas existente en una base de datos NoSQL
